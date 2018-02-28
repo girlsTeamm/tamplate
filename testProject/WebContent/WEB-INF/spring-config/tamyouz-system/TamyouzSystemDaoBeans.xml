@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<!-- coding DAO's -->
+
+	<bean name="departmentDao" class="com.test.model.dao.impl.DeparmentDaoImpl"
+		scope="session">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+<bean name="employeeDao" class="com.test.model.dao.impl.EmployeeDaoImpl"
+		scope="session">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+
+</beans>

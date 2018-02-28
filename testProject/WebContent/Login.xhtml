@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+   <link rel="stylesheet" type="text/css"
+		href="../testProject/javax.faces.resource/css/login.css" />
+		<link rel="stylesheet" type="text/css"
+		href="resources/css/normalize.css"/>		
+</h:head>
+<div class="container">
+	<b:panelGrid colSpans="12">		
+<h:form>
+<!--  <ul class="sidenav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+<div class="loginbox">
+	<img class="proimage" src="../testProject/javax.faces.resource/images/loginLogo.jpg"/>
+<h:form >
+   <h:outputText value="User Name: " />
+       <b:inputText placeholder="UserName" type="text"></b:inputText>
+      
+        <h:outputText value="PassWord" />
+       <b:inputText placeholder="PassWord" type="Password"></b:inputText>
+       <input type="submit" value="Log in"/>
+       <a href="#">Lost your password??</a><br />
+       <a href="#">Don't have an account??</a>
+    
+</h:form>
+</div>
+</h:form>
+
+</b:panelGrid>
+</div>
+</ui:composition>

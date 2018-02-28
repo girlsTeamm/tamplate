@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://java.sun.com/jsf/html"
+     xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" lang="ar">
+
+<h:head>
+   <link rel="stylesheet" type="text/css"
+		href="../testProject/javax.faces.resource/css/template.css" />		
+</h:head>
+<body>
+<ul class="topnav">
+  <li  class="icon"><a class="active" href="">شكوى</a></li>
+  <li class="right"><a href="" onclick="#{pageNavigation.navigate('/homePage.xhtml')}">الصفحة الرئيسية</a></li>
+  <li class="right"><a href="">معلومات</a></li>
+  <li class="right"><a href="">أسئلة متكررة</a></li>
+  <li class="right"><a href="">اتصل بنا</a></li>
+  <li><a href="" onclick="#{pageNavigation.navigate('/homePage.xhtml')}">تسجيل الدخول <span class="glyphicon glyphicon-log-in"></span></a></li>
+</ul>
+	<b:column id="panel_content" span="12" styleClass="content" >
+		<ui:insert name="content" />
+	</b:column>
+</body>
+</html>

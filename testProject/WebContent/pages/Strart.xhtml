@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+	
+
+    <h:form>
+    <b:panelGrid col-spans="2,10">
+       <!-- <p:outputPanel>
+		    <h:outputLabel for="depname" value="  Department Name:" />
+			<p:inputText value="#{departmentBean.deparment.name}"></p:inputText>
+			<b:commandButton value="Save Department" ajax="true" process="@form"
+				action="#{departmentBean.addDeparment()}" update="@all" icon-awesome="save"></b:commandButton>
+			</p:outputPanel>
+		<p:outputPanel>
+		    <h:outputLabel for="fname" value="  First Name: " />
+			<p:inputText value="#{departmentBean.employee.FName}"></p:inputText>
+			<h:outputLabel for="lname" value="  Last Name: " style="font-weight:bold" />
+			<p:inputText value="#{departmentBean.employee.LName}"></p:inputText>
+			<p:commandButton value="save Employee" ajax="true" process="@form"
+			update="@all" action="#{departmentBean.addEmployee()}"></p:commandButton>
+		</p:outputPanel>-->
+		
+   <h:outputText value="الاسم" />
+       <b:inputText placeholder="الاسم"></b:inputText>
+      
+        <h:outputText value="الكنية" />
+       <b:inputText placeholder="الكنية"></b:inputText>
+    </b:panelGrid>
+    <b:commandButton value="حفظ" look="success" icon-awesome="save"></b:commandButton>
+    </h:form>
+	
+</ui:composition>

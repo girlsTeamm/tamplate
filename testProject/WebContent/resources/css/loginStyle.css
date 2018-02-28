@@ -1,0 +1,56 @@
+body {	
+	background: -webkit-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #EDEDED, #DBDBDB, #EDEDED) !important; /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #EDEDED, #DBDBDB, #EDEDED) !important; /* Standard syntax (must be last) */    
+}
+.container_login {
+	width:700px !important; 
+	padding-top: 130px !important;	
+}
+.image_Container {
+	padding-top: 10px !important;
+	margin-right: 0px !important;
+}
+
+footer {	
+	text-align: center !important;
+}
+
+footer hr {
+	border-color: #DEDEDE !important;
+	margin-top: 250px !important;
+}
+
+.copyrights {
+	color: #142F53; 
+	padding-bottom: 20px;
+	margin-top: -10px !important;
+}
+.loginPanelStyle{		   
+    background: -webkit-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #D8D8D8) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #EDEDED, #DBDBDB, #EDEDED) !important; /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right, #D8D8D8, #EDEDED, #D8D8D8, #EDEDED, #EDEDED, #DBDBDB, #EDEDED) !important; /* Standard syntax (must be last) */
+    border-color: #CDCDCD !important;     
+}
+
+.loginPanelStyle > .panel-heading { 
+   /* padding: 20px 15px !important;	*/
+	/*background-image: linear-gradient(#4F7FB2, #446E9B) !important;*/
+}
+
+.well{
+	margin-bottom: 0 !important;
+    padding: 25px !important;
+    border-color: #D8D8D8 !important;
+}
+
+.row {
+    margin-left: -50px;
+    margin-right: -15px;
+}
+
+.labelStyle{
+	font-weight: bold !important;
+}

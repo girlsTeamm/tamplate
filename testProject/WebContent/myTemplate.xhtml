@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+   <link rel="stylesheet" type="text/css"
+		href="../testProject/javax.faces.resource/css/myTemplate.css" />
+		<link rel="stylesheet" type="text/css"
+		href="resources/css/normalize.css"/>
+		
+</h:head>
+<body>
+<!-- image div -->
+<div class="slider">
+</div>
+<div class="graydiv">
+    <h2>تقديم شكوى</h2>
+</div>
+<!-- NAVBAR -->
+<div class="basenavbar">
+<!--  <h:form>
+     <ul id="navlist">
+     <li><a >اتصل بنا</a></li>
+     <li><a >أسئلة متكررة</a></li>
+     <li><a >معلومات</a></li>
+     <li><a >التعليمات والضوابط</a></li>
+     <li><a >حقوق العميل ومسؤولياته</a></li>
+     </ul>
+</h:form>-->
+	<h:form id="form_menu">
+		
+		<b:navBar id="navBar_menu" inverse="true" fluid="true">
+			<b:navbarLinks >
+				<b:navLink value="اتصل بنا" ajax="true" ></b:navLink>
+				<b:navLink value="أسئلة متكررة" ajax="true"></b:navLink>
+				<b:navLink value="معلومات" ajax="true"></b:navLink>
+				<b:navLink value="التعليمات والضوابط" ajax="true"></b:navLink>
+				<b:navLink value="حقوق العميل ومسؤولياته" ajax="true"></b:navLink>
+				<b:navLink value="" ajax="true" styleClass="handCursor"
+					icon="glyphicon glyphicon-home"></b:navLink>
+				
+			</b:navbarLinks>
+
+		</b:navBar>
+	</h:form>
+</div>
+    
+<div class="blackdivfooter">
+    
+</div>
+<div class="footer">
+  <p>جميع الحقوق محفوظة</p>
+</div>
+</body>
+</html>

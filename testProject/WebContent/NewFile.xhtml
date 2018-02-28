@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	</h:head>
+	
+	<h:body>
+		 <h:form>
+			<p:outputPanel>
+				    <h:outputLabel for="depname" value="Department Name:" style="font-weight:bold" />
+					<p:inputText value="#{departmentBean.deparment.name}"></p:inputText>
+					<p:commandButton value="Save Department" ajax="true" process="@form"
+						action="#{departmentBean.addDeparment()}" update="@all">
+					</p:commandButton>
+						
+				<p:dataTable id="dpartment" var="dep" value="#{departmentBean.getListDepartment()}" style="margin-bottom:20px">
+		    
+					       <p:column headerText="Id">
+								<h:outputText value="#{dep.id}" />
+					       </p:column>
+					 
+					       <p:column headerText="name">
+								<h:outputText value="#{dep.name}" />
+					       </p:column>
+					
+					        <p:column headerText="">
+								<p:commandButton value="delete" update="@all" action="#{departmentBean.deletDepartment(dep)}">		
+								</p:commandButton>
+					       </p:column>
+		       			   <p:column headerText="">
+								<p:commandButton value="update" update="@all" action="#{departmentBean.deletDepartment(dep)}">		
+								</p:commandButton>
+					       </p:column>
+		   		</p:dataTable>
+			</p:outputPanel>
+		</h:form>
+		<p:growl id="msgs" showDetail="true"/>
+		<h:form >
+			<p:outputPanel>
+			    <h:outputLabel for="fname" value="  First Name: " style="font-weight:bold" />
+				<p:inputText value="#{departmentBean.employee.FName}"></p:inputText>
+				<br/>
+				<h:outputLabel for="lname" value="  Last Name: " style="font-weight:bold" />
+				<p:inputText value="#{departmentBean.employee.LName}"></p:inputText>
+				<!-- button add employee -->
+				<p:commandButton value="save Employee" ajax="true" process="@form"
+								 update="@all" action="#{departmentBean.addEmployee()}">
+				</p:commandButton>
+				<br/><br/>
+				<!-- employee table -->
+				<p:dataTable id="dpartment" var="dep" value="#{departmentBean.getListDepartment()}"
+							 editable="true" style="margin-bottom:20px">
+				    
+			 	   <p:ajax event="rowEdit" listener="#{departmentBean.onRowEdit}" update=":msgs" />
+ 
+			       <p:column headerText="name">
+			           <p:cellEditor>
+			               <f:facet name="output"><h:outputText value="#{dep.name}" /></f:facet>
+			               <f:facet name="input"><p:inputText id="modelInput" value="#{dep.name}" style="width:100%"/></f:facet>
+			           </p:cellEditor>
+			       </p:column>
+			 
+			       <p:column style="width:32px">
+			           <p:rowEditor />
+			       </p:column>
+			   </p:dataTable>
+ 
+			</p:outputPanel>
+		</h:form>	
+	</h:body>
+</html>

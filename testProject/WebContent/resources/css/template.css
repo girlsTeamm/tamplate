@@ -1,0 +1,32 @@
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #3F72A1;/*#52ACCA;*/
+}
+
+ul.topnav li {float: left; margin: 0;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    margin: 0;
+    font-size: large;
+}
+
+ul.topnav li a:hover { color: #F1DB93;}
+
+
+ul.topnav li.right {float: right;}
+
+ul.topnav li.icon {float: right; font-weight: bold;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}

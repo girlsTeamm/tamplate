@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" lang="ar">
+
+
+<h:head>
+
+	<link rel="stylesheet" type="text/css"
+		href="../TemplateProject/javax.faces.resource/css/style.css" />
+	<link rel="stylesheet" type="text/css"
+		href="../TemplateProject/javax.faces.resource/css/bootstrap-rtl.css"
+		/>
+	<h:outputScript library="js" name="moment-with-locales.js"></h:outputScript>
+	<h:outputScript library="js" name="js/modal.js"></h:outputScript>
+</h:head>
+<h:body style="height:5000px;">
+	<script>
+        if ($.blockUI) {
+          $.blockUI.defaults.overlayCSS.opacity=0;
+          $.blockUI.defaults.message='<h1><img src="../TemplateProject/javax.faces.resource/bsf/images/waitcursor.gif" /></h1>';
+        }
+        function loadRtlStyle(){
+        	$('link[library=userLib]').remove();
+        	$('head')
+			.append(
+					'<link rel="stylesheet" type="text/css" href="../TemplateProject/javax.faces.resource/css/bootstrap-rtl.css" library="userLib" />');
+			            
+        $('head')
+		.append(
+				'<link rel="stylesheet" type="text/css" href="../TemplateProject/javax.faces.resource/css/style.css" library="userLib" />');
+		
+        }
+        function removeRtlStyle(){
+        	$('link[library=userLib]').remove();
+        	$('head')
+    		.append(
+    				'<link rel="stylesheet" type="text/css" href="../TemplateProject/javax.faces.resource/css/styleLTR.css" library="userLib" />');   		
+            }  
+
+        function excuteUpdate(){
+            primeUpdate();
+            }    
+     </script>
+
+<h:form>     
+    <p:growl id="messages" showDetail="true" />
+ 
+    
+</h:form>
+	<h:form id="form_menu">
+		
+		<b:navBar id="navBar_menu" inverse="true" fluid="true">
+			<b:navbarLinks>
+				<b:navLink value="" ajax="true"
+					oncomplete="primeUpdate();return false;" styleClass="handCursor"
+					onclick="ajax:pageNavigation.navigate('/pages/Start.xhtml')"
+					icon="glyphicon glyphicon-th-list"></b:navLink>
+
+
+			</b:navbarLinks>
+
+
+		</b:navBar>
+
+		<p:remoteCommand autoRun="true" name="primeUpdate"
+			update="@(.content) @([id$=navBar_menu])"></p:remoteCommand>
+	</h:form>
+
+
+	<b:column id="panel_content" span="12" styleClass="content">
+		<ui:insert name="content" />
+	</b:column>
+
+</h:body>
+</html>
